@@ -1,13 +1,14 @@
 const express = require('express');
 const http = require('http');
 const app = express();
+const PORT = process.env.PORT || 8080;
 
 const clientPath = `${__dirname}/../client`;
 app.use(express.static(clientPath));
 
 const server = http.createServer(app);
 
-server.listen(8080, () => {
+server.listen(PORT, () => {
     console.log("server running on 8080");
 });
 
