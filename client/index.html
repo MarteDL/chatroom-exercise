@@ -18,47 +18,56 @@
         <button id="sendToMyself">Send to myself</button>
     </div>
 
-    <!-- Content wrapper start -->
-    <div class="content-wrapper">
+    <div class="row">
 
-        <!-- Row start -->
-        <div class="row gutters">
+        <div class="col-11">
+            <!-- Content wrapper start -->
+            <div class="content-wrapper">
 
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <!-- Row start -->
+                <div class="row gutters">
 
-                <div class="card m-0">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                    <!-- Row start -->
-                    <div class="row no-gutters">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
-                            <div id="usersBox" class="users-container users text-center">
-                                <div class="card-header text-center">Online friends</div>
-                                <ul id="users"></ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
-                            <div id="target" class="chat-container">
-                                <ul class="chat-box">
-                                </ul>
+                        <div class="card m-0">
+
+                            <!-- Row start -->
+                            <div class="row no-gutters">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
+                                    <div id="usersBox" class="users-container users text-center">
+                                        <div class="card-header text-center">Online friends</div>
+                                        <ul id="users"></ul>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
+                                    <div id="target" class="chat-container">
+                                        <ul class="chat-box">
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="privateMessageBox" class="container d-flex justify-content-right">
-        <div class="card card-private card-bordered">
-            <div class="card-header-private">
-                <label for="receiver">Chat with: </label>
-                <select id="receiver" name="receiver"></select>
-            </div>
-            <div id="thePrivateMessages" class="card-body"></div>
-            <div id="formToSendMessage" class="border-light row">
-                <label for="privateMessage" hidden></label>
-                <input class="private-input col-10" type="text" id="privateMessage" name="privateMessage" placeholder="Write message">
-                <button id="sendPrivateMessage" class="btn btn-private col-1"><i class="fa fa-paper-plane"></i></button>
+        <div class="col-1">
+            <div id="privateMessageBox" class="container d-flex justify-content-right">
+                <div class="card card-private card-bordered">
+                    <div class="card-header-private">
+                        <label for="receiver">Chat with: </label>
+                        <select id="receiver" name="receiver"></select>
+                    </div>
+                    <div id="thePrivateMessages" class="card-body ps-container"></div>
+                    <div id="formToSendMessage" class="border-light row">
+                        <label for="privateMessage" hidden></label>
+                        <input class="private-input col-10" type="text" id="privateMessage" name="privateMessage"
+                               placeholder="Write message">
+                        <button id="sendPrivateMessage" class="btn btn-private col-1"><i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -57,6 +57,11 @@ ul {
 .chat-container {
     position: relative;
     padding: 1rem;
+    -ms-touch-action: auto;
+    touch-action: auto;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+    overflow-y: scroll !important; height:60vh !important;
 }
 
 .chat-container li.chat-left,
@@ -127,6 +132,13 @@ ul {
 }
 
 /* private messaging styling */
+.ps-container {
+    -ms-touch-action: auto;
+    touch-action: auto;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+    overflow-y: scroll !important; height:40vh !important;
+}
 
 .card-private {
     border: 0;
