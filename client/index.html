@@ -11,7 +11,6 @@
 <body>
 <main class="container">
     <h1 class="m-5 text-center">Welcome to my chatroom!</h1>
-
     <div class="mb-5 text-center">
         <label for="message" hidden></label>
         <input type="text" id="message" name="message" placeholder="type your message here">
@@ -19,18 +18,39 @@
         <button id="sendToMyself">Send to myself</button>
     </div>
 
-    <div id="target">
-        <ul></ul>
-    </div>
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
 
-    <div id="usersBox" class="users text-center">
-        <h5>Online friends</h5>
-        <ul id="users"></ul>
+        <!-- Row start -->
+        <div class="row gutters">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                <div class="card m-0">
+
+                    <!-- Row start -->
+                    <div class="row no-gutters">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-3 col-3">
+                            <div id="usersBox" class="users-container users text-center">
+                                <div class="card-header text-center">Online friends</div>
+                                <ul id="users"></ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-9 col-9">
+                            <div id="target" class="chat-container">
+                                <ul class="chat-box">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="privateMessageBox" class="container d-flex justify-content-right">
-        <div class="card card-bordered">
-            <div class="card-header">
+        <div class="card card-private card-bordered">
+            <div class="card-header card-header-private">
                 <label for="receiver">Chat with: </label>
                 <select id="receiver" name="receiver"></select>
             </div>
