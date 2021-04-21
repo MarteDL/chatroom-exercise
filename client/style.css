@@ -1,13 +1,112 @@
+li {
+    list-style-type: none;
+}
+
 ul {
     padding: 0;
     margin: 0;
 }
 
-li {
+#target li {
     background: darkgrey;
-    list-style-type: none;
 }
 
-li:nth-child(odd) {
+#target li:nth-child(odd) {
     background: lightgray;
+}
+
+#usersBox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20vw;
+    border: 2px solid black;
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.card-header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(77, 82, 89, 0.07)
+}
+
+#privateMessageBox {
+    right: 0;
+    width: 20vw;
+    border: 2px solid grey;
+    bottom:0;
+    position:fixed;
+    float:right;
+    margin-left:10px;
+}
+
+.messageSent {
+    -webkit-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+    clear: right;
+    background-color: #48b0f7;
+    color: #fff;
+    border-radius: 3px;
+    padding-right: 12px;
+    padding-left: 5px;
+    margin: 4px 0 4px 64px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse
+}
+
+.messageReceived {
+    position: relative;
+    background-color: #f5f6f7;
+    border-radius: 3px;
+    font-weight: 100;
+    color: #9b9b9b;
+    -webkit-transition: background-color .2s linear;
+    transition: background-color .2s linear;
+    padding-right: 12px;
+    padding-left: 5px;
+    margin: 4px 64px 4px 0;
+}
+
+#formToSendMessage {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #f9fafb
+}
+
+.private-input {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    border: none;
+    outline: none !important;
+    background-color: transparent
+}
+
+.btn-private {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #48b0f7 !important;
+    overflow: -moz-hidden-unscrollable;
+    -webkit-transition: .2s linear;
+    transition: .2s linear
 }

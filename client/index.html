@@ -3,6 +3,7 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Title</title>
@@ -18,8 +19,28 @@
         <button id="sendToMyself">Send to myself</button>
     </div>
 
-    <div>
-        <ul id="target"></ul>
+    <div id="target">
+        <ul></ul>
+    </div>
+
+    <div id="usersBox" class="users text-center">
+        <h5>Online friends</h5>
+        <ul id="users"></ul>
+    </div>
+
+    <div id="privateMessageBox" class="container d-flex justify-content-right">
+        <div class="card card-bordered">
+            <div class="card-header">
+                <label for="receiver">Chat with: </label>
+                <select id="receiver" name="receiver"></select>
+            </div>
+            <div id="thePrivateMessages" class="card-body"></div>
+            <div id="formToSendMessage" class="border-light row">
+                <label for="privateMessage" hidden></label>
+                <input class="private-input col-10" type="text" id="privateMessage" name="privateMessage" placeholder="Write message">
+                <button id="sendPrivateMessage" class="btn btn-private col-1"><i class="fa fa-paper-plane"></i></button>
+            </div>
+        </div>
     </div>
 </main>
 
