@@ -22,13 +22,15 @@ io.on('connection', socket => {
 
     socket.on('disconnect', () => {
 
-        let index = users.findIndex(user => user.username === currentUser.username);
-        users.splice(index, 1);
+        if(currentUser !== null) {
+            let index = users.findIndex(user => user.username === currentUser.username);
+            users.splice(index, 1);
 
-        console.log('users list after disconnect: ')
-        console.log(users);
+            console.log('users list after disconnect: ')
+            console.log(users);
 
-        io.emit('user list', users);
+            io.emit('user list', users);
+        }
     })
 
 
