@@ -32,6 +32,26 @@ ul {
     border-bottom: 1px solid #f0f4f8;
 }
 
+.users .person .user {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.users .person .user img {
+    width: 48px;
+    height: 48px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.users .person p.name {
+    font-weight: 600;
+    font-size: .85rem;
+    display: inline-block;
+}
+
 /* general messaging area */
 
 .chat-container {
@@ -115,7 +135,8 @@ ul {
     -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03);
     -webkit-transition: .5s;
-    transition: .5s
+    transition: .5s;
+    background: white!important;
 }
 
 .card-header-private {

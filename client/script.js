@@ -1,16 +1,16 @@
 class User {
-    constructor(username, fontColor, socketId) {
+    constructor(username, sex, socketId) {
         this.username = username;
-        this.fontColor = fontColor;
+        this.sex = sex;
         this.socketId = socketId;
     }
 }
 
 let socket = io.connect();
 let username = prompt("What is your username?");
-let fontColor = prompt("Which font-color do you want to use?");
+let sex = prompt("Are you male, female or human?");
 
-let userOfThisSocket = new User(username, fontColor, 0);
+let userOfThisSocket = new User(username, sex, 0);
 
 socket.on('connect', () => {
     userOfThisSocket.socketId = socket.id;
@@ -29,12 +29,25 @@ socket.on("user list", users => {
         option.textContent = user.username;
         document.getElementById('receiver').appendChild(option);
 
-        // list of online users
+        // creating of our listelements
         let listItem = document.createElement('li');
+        let userDiv = document.createElement('div');
+        let avatar = document.createElement('img');
+        let name = document.createElement('p');
+
+        // adding the right properties
         listItem.id = user.username;
         listItem.classList.add('person');
-        listItem.textContent = user.username;
-        listItem.style.color = user.fontColor;
+        userDiv.classList.add('user');
+        avatar.src = "https://avatars.dicebear.com/api/"+user.sex+"/"+user.username+".svg";
+        name.textContent = user.username;
+        name.classList.add('name');
+
+        //putting it all together
+        userDiv.appendChild(avatar);
+        listItem.appendChild(userDiv);
+        listItem.appendChild(name);
+
         document.getElementById('users').appendChild(listItem);
     })
 })
@@ -73,7 +86,7 @@ socket.on('display message', (user, message) => {
     userDiv.classList.add('chat-avatar');
     nameDiv.textContent = user.username;
     nameDiv.classList.add('chat-name');
-    avatar.src = "";
+    avatar.src = "https://avatars.dicebear.com/api/"+user.sex+"/"+user.username+".svg";
     messageDiv.textContent = message;
     messageDiv.classList.add('chat-text');
 
